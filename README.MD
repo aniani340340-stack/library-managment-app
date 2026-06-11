@@ -1,8 +1,13 @@
-# Library Management System
+# Library Management System (Python)
 
 ## Overview
 
-A command-line Library Management System built using Python and CSV file handling. This project allows users to manage books in a library, including adding books, searching books, issuing books, returning books, and deleting book records.
+A Library Management System developed in Python to practice both:
+
+* CRUD Operations (Create, Read, Update, Delete)
+* Object-Oriented Programming (OOP)
+
+The project allows users to manage books, issue books, return books, search books, and delete records while maintaining book inventory.
 
 ---
 
@@ -11,80 +16,102 @@ A command-line Library Management System built using Python and CSV file handlin
 ### Add Book
 
 * Add a new book to the library.
-* Prevents duplicate Book IDs.
+* Prevent duplicate Book IDs.
 
 ### Search Book
 
-* Search for a book using its Book ID.
+* Search books using Book ID.
 
-### Show All Books
+### Display Books
 
-* Display all books available in the library.
+* View all books available in the library.
 
 ### Issue Book
 
-* Issue a book to a user.
-* Reduces the available quantity by 1.
-* Prevents issuing when quantity is 0.
+* Borrow a book from the library.
+* Automatically decreases available quantity.
+* Prevents issuing books when quantity reaches zero.
 
 ### Return Book
 
-* Return a previously issued book.
-* Increases the available quantity by 1.
+* Return a borrowed book.
+* Automatically increases available quantity.
 
 ### Delete Book
 
-* Remove a book record from the library.
+* Remove a book from the library records.
 
-### Exit
+---
 
-* Safely exit the application.
+## OOP Concepts Used
+
+### Book Class
+
+Stores information related to a single book.
+
+Attributes:
+
+* Book ID
+* Book Name
+* Author
+* Quantity
+
+Methods:
+
+* Constructor (`__init__`)
+* String Representation (`__str__`)
+
+### Library Class
+
+Manages all book operations.
+
+Methods:
+
+* add_book()
+* borrow_book()
+* return_book()
+* display_books()
+
+---
+
+## CRUD Operations Implemented
+
+| Operation | Description              |
+| --------- | ------------------------ |
+| Create    | Add new books            |
+| Read      | Search and display books |
+| Update    | Issue and return books   |
+| Delete    | Remove book records      |
 
 ---
 
 ## Technologies Used
 
 * Python
-* CSV File Handling
+* Object-Oriented Programming
+* Lists
 * Loops
 * Conditional Statements
+* Functions
 * Exception Handling
-* CRUD Operations
+* CSV/File Handling
 
 ---
 
-## File Structure
+## Project Structure
 
 ```text
 Library-Management-System/
 │
-├── library_management.py
+├── library-management-app.py
+├── library-management-app-opp.py
 ├── booksdata.csv
-├── temparorydata.csv
 └── README.md
 ```
 
 ---
 
-## CSV Format
-
-### booksdata.csv
-
-```text
-BookID,BookName,Author,Quantity
-```
-
-Example:
-
-```text
-101,Python Basics,Guido van Rossum,5
-102,C++ Programming,Bjarne Stroustrup,3
-103,Data Science,Andrew Ng,2
-```
-
----
-
-## Menu
+## Sample Menu
 
 ```text
 1. Add Book
@@ -98,28 +125,44 @@ Example:
 
 ---
 
-## Concepts Learned
+## Sample Book Object
 
+```text
+Book
+├── Book ID : 101
+├── Name    : Mahabharat
+├── Author  : Vyash
+└── Quantity: 5
+```
+
+---
+
+## Learning Outcomes
+
+Through this project, I learned:
+
+* Object-Oriented Programming
+* Classes and Objects
+* Constructors (`__init__`)
+* Special Methods (`__str__`)
 * CRUD Operations
+* Inventory Management Logic
 * File Handling
-* CSV Processing
-* Search Algorithms
-* Inventory Management
-* Business Logic
 * Data Validation
-* Exception Handling
+* Search and Update Algorithms
 
 ---
 
 ## Future Improvements
 
-* Update Book Details
+* Save OOP objects to CSV automatically
 * Search by Book Name
-* Date of Issue and Return
+* Update Book Details
+* Fine Management System
 * Student Records
-* Fine Calculation System
-* Object-Oriented Programming (Classes & Objects)
-* Database Integration (SQLite/MySQL)
+* Issue Date and Return Date
+* SQLite Database Integration
+* GUI using Tkinter
 
 ---
 
@@ -131,4 +174,6 @@ Anish Agrawal
 
 ## Project Status
 
-Completed as part of a Python Programming Learning Roadmap.
+✅ Completed
+
+Part of my Python Development and AI/ML Learning Roadmap.
