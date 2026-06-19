@@ -1,179 +1,127 @@
-# Library Management System (Python)
+📚 Library Management System (Python + MySQL)
+Overview
 
-## Overview
+A command-line Library Management System built using Python and MySQL. This project allows users to manage library books efficiently using a relational database instead of file storage.
 
-A Library Management System developed in Python to practice both:
+The project demonstrates database connectivity, CRUD operations, SQL queries, input validation, and basic inventory management concepts.
 
-* CRUD Operations (Create, Read, Update, Delete)
-* Object-Oriented Programming (OOP)
+Features
 
-The project allows users to manage books, issue books, return books, search books, and delete records while maintaining book inventory.
+✅ Add New Books
 
----
+✅ Search Books by Book ID
 
-## Features
+✅ View All Books
 
-### Add Book
+✅ Issue Books
 
-* Add a new book to the library.
-* Prevent duplicate Book IDs.
+✅ Return Books
 
-### Search Book
+✅ Delete Books
 
-* Search books using Book ID.
+✅ Duplicate Book ID Validation
 
-### Display Books
+✅ Quantity Availability Check
 
-* View all books available in the library.
+✅ MySQL Database Integration
 
-### Issue Book
+✅ Input Validation using Exception Handling
 
-* Borrow a book from the library.
-* Automatically decreases available quantity.
-* Prevents issuing books when quantity reaches zero.
-
-### Return Book
-
-* Return a borrowed book.
-* Automatically increases available quantity.
-
-### Delete Book
-
-* Remove a book from the library records.
-
----
-
-## OOP Concepts Used
-
-### Book Class
-
-Stores information related to a single book.
-
-Attributes:
-
-* Book ID
-* Book Name
-* Author
-* Quantity
-
-Methods:
-
-* Constructor (`__init__`)
-* String Representation (`__str__`)
-
-### Library Class
-
-Manages all book operations.
-
-Methods:
-
-* add_book()
-* borrow_book()
-* return_book()
-* display_books()
-
----
-
-## CRUD Operations Implemented
-
-| Operation | Description              |
-| --------- | ------------------------ |
-| Create    | Add new books            |
-| Read      | Search and display books |
-| Update    | Issue and return books   |
-| Delete    | Remove book records      |
-
----
-
-## Technologies Used
-
-* Python
-* Object-Oriented Programming
-* Lists
-* Loops
-* Conditional Statements
-* Functions
-* Exception Handling
-* CSV/File Handling
-
----
-
-## Project Structure
-
-```text
-Library-Management-System/
+Technologies Used
+Python 3
+MySQL
+MySQL Connector for Python
+Project Structure
+library-management-app/
 │
-├── library-management-app.py
-├── library-management-app-opp.py
-├── booksdata.csv
-└── README.md
-```
+├── library-management.py
+├── schema.sql
+├── README.md
+├── requirements.txt
+Database Schema
+Database
+CREATE DATABASE library_db;
+Table
+CREATE TABLE books(
+    BookID INT PRIMARY KEY,
+    BookName VARCHAR(100),
+    Author VARCHAR(100),
+    Quantity INT
+);
+SQL Concepts Used
+CREATE DATABASE
+CREATE TABLE
+INSERT
+SELECT
+UPDATE
+DELETE
+WHERE Clause
+PRIMARY KEY
+Database Constraints
+Functionalities
+Add Book
 
----
+Adds a new book to the database while preventing duplicate Book IDs.
 
-## Sample Menu
+Search Book
 
-```text
-1. Add Book
-2. Search Book
-3. Show All Books
-4. Issue Book
-5. Return Book
-6. Delete Book Data
-7. Exit
-```
+Searches and displays book details using Book ID.
 
----
+Show All Books
 
-## Sample Book Object
+Displays all books stored in the database.
 
-```text
-Book
-├── Book ID : 101
-├── Name    : Mahabharat
-├── Author  : Vyash
-└── Quantity: 5
-```
+Issue Book
 
----
+Reduces available quantity by 1 after validating availability.
 
-## Learning Outcomes
+Return Book
 
-Through this project, I learned:
+Increases quantity when a book is returned.
 
-* Object-Oriented Programming
-* Classes and Objects
-* Constructors (`__init__`)
-* Special Methods (`__str__`)
-* CRUD Operations
-* Inventory Management Logic
-* File Handling
-* Data Validation
-* Search and Update Algorithms
+Delete Book
 
----
+Removes a book record from the database.
 
-## Future Improvements
+Installation
+Clone Repository
+git clone <repository-url>
+Install Dependency
+pip install mysql-connector-python
 
-* Save OOP objects to CSV automatically
-* Search by Book Name
-* Update Book Details
-* Fine Management System
-* Student Records
-* Issue Date and Return Date
-* SQLite Database Integration
-* GUI using Tkinter
+or
 
----
+pip install -r requirements.txt
+Create Database
 
-## Author
+Run the SQL commands inside schema.sql.
+
+Run Project
+python library-management.py
+Learning Outcomes
+
+Through this project I learned:
+
+Python Programming
+Object-Oriented Thinking
+Exception Handling
+Database Design
+SQL CRUD Operations
+Python–MySQL Integration
+Working with Relational Databases
+Input Validation and Error Handling
+Future Enhancements
+Student Management Module
+Book Issue History
+Fine Calculation System
+Login Authentication
+GUI using Tkinter
+Web Version using Flask/Django
+Report Generation
+Author
 
 Anish Agrawal
 
----
+B.Tech CSE (Cloud Computing)
 
-## Project Status
-
-✅ Completed
-
-Part of my Python Development and AI/ML Learning Roadmap.
+SRM Institute of Science and Technology
